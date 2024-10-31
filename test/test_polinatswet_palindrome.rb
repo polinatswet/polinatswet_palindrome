@@ -5,8 +5,8 @@ require "test_helper"
 class TestPolinatswetPalindrome < Minitest::Test
   # negative case
   def test_non_palindrome
-    assert ! "apple".palindrome?
-    #refute ! "apple".palindrome?
+    #assert ! "apple".palindrome?
+    refute ! "apple".palindrome?
   end
 
   # positive case
@@ -19,6 +19,11 @@ class TestPolinatswetPalindrome < Minitest::Test
   end
 
   def test_palindrome_with_punctuation
-    skip
+    assert "Madam, I'm Adam.".palindrome?
+  end
+
+  # Adding a test for the letters method. RED
+  def test_letters
+    assert_equal "MadamImAdam", "Madam, I'm Adam.".letters
   end
 end
