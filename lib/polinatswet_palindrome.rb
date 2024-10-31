@@ -12,6 +12,10 @@ require "polinatswet_palindrome/version"
       processed_content == processed_content.reverse
     end
 
+    # возвращает буквы в строке
+    def letters
+    end
+
     private
 
   # return content for palindrome testing
