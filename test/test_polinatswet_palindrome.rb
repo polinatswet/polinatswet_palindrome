@@ -5,8 +5,8 @@ require "test_helper"
 class TestPolinatswetPalindrome < Minitest::Test
   # negative case
   def test_non_palindrome
-    #assert ! "apple".palindrome?
-    refute ! "apple".palindrome?
+    assert ! "apple".palindrome?
+    #refute ! "apple".palindrome?
   end
 
   # positive case
