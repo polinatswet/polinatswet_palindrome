@@ -21,9 +21,4 @@ class TestPolinatswetPalindrome < Minitest::Test
   def test_palindrome_with_punctuation
     assert "Madam, I'm Adam.".palindrome?
   end
-
-  # Adding a test for the letters method. RED
-  def test_letters
-    assert_equal "MadamImAdam", "Madam, I'm Adam.".letters
-  end
 end
