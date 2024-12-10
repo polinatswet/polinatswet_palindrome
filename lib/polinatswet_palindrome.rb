@@ -1,8 +1,7 @@
-# putting the palindrome detector in the gem
-
 require 'polinatswet_palindrome/version'
 
-class String
+module PtswetPalindrome
+
   # returns true for a palindrome ,false otherwise.
   def palindrome?
     processed_content == processed_content.reverse
@@ -10,8 +9,16 @@ class String
 
   private
 
-  # returns content for palindrome testing
-  def processed_content
-   scan(/[a-z]/i).join.downcase
-  end
+    # returns content for palindrome testing
+    def processed_content
+      to_s.scan(/[a-z0-9]/i).join.downcase # учитывает цифры и буквы
+    end
+end
+
+class String
+  include PtswetPalindrome
+end
+
+class Integer
+  include PtswetPalindrome # Подключить модуль палиндромов для целых чисел
 end
