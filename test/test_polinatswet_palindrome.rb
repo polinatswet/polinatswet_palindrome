@@ -1,14 +1,12 @@
 require "test_helper"
 
 class TestPolinatswetPalindrome < Minitest::Test
-  # negative case
-  def test_non_palindrome
+  def test_non_palindrome # negative case
     assert ! "apple".palindrome?
     #refute ! "apple".palindrome?
   end
 
-  # positive case
-  def test_literal_palindrome
+  def test_literal_palindrome # positive case
     assert "racecar".palindrome?
   end
 
@@ -26,5 +24,13 @@ class TestPolinatswetPalindrome < Minitest::Test
 
   def test_integer_palindrome
     assert 12321.palindrome?
+  end
+
+  def test_string_of_2_spaces_is_not_a_palindrome
+    assert !"  ".palindrome? # отрицание
+  end
+
+  def test_string_of_5_spaces_is_not_a_palindrome
+    assert !(" " * 5).palindrome?
   end
 end
